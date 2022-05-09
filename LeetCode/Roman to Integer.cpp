@@ -1,5 +1,4 @@
 // Easy
-
 class Solution {
 public:
     int romanToInt(string s) {
@@ -7,7 +6,7 @@ public:
         int n = s.size();
         int total = mp[s.back()];
         for(int i = n-2; i>=0; i--) {
-            if(mp[i] < mp[i+1]) {
+            if(mp[s[i]] < mp[s[i+1]]) {
                 total -= mp[s[i]];
             }
             else {
